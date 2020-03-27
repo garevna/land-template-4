@@ -1,29 +1,43 @@
 <template>
   <v-app light>
-    <v-container fluid fill-height>
-      <v-row justify="center" class="mx-auto" style="max-width: 1440px">
-        <v-col justify="center" cols="12" md="6" lg="4" xl="3" v-for="(card, index) in cards" :key="index">
-          <v-card
-                hover
-                text-left
-                style="position: relative"
-                @click="clickHandler"
-                class="py-auto px-8"
-                height="320"
+    <v-container class="my-md-12 py-md-12">
+      <v-row>
+        <v-col cols="12">
+          <v-row
+            align="center"
+            justify="center"
+            style="height: 400px;"
           >
-            <v-card-text>{{ card.date }}</v-card-text>
-            <v-card-title>{{ card.title }}</v-card-title>
-            <v-row style="position: absolute; bottom: 30px">
-              <v-col cols="6" style="text-align: left">
+            <v-card
+                    v-for="(card, index) in cards"
+                    :key="index"
+                    class="ma-3 pa-6"
+                    width="320"
+                    height="320"
+                    @click="clickHandler(card.ref)"
+            >
+              <v-row style="height: 40px;">
+                <v-col cols="12">
+                    {{ card.date }}
+                </v-col>
+              </v-row>
+              <v-row style="height: 160px;">
+                <v-col cols="12">
+                    <h3 style="word-break: normal!important">{{ card.title }}</h3>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="5" style="text-align: left">
                   <v-img
                       :src="card.logo"
                       height="50"
                       contain
                       position="left bottom"
                   ></v-img>
-              </v-col>
-            </v-row>
-          </v-card>
+                </v-col>
+              </v-row>
+            </v-card>
+          </v-row>
         </v-col>
       </v-row>
     </v-container>
@@ -32,13 +46,7 @@
 
 <style scoped>
 * {
-  background-position: bottom left!important;
-}
-.card-logo {
-  position: absolute;
-  bottom: 20px;
-  height: 70px;
-  width: 160px;
+  font-family: 'Gilroy';
 }
 </style>
 
@@ -56,8 +64,8 @@ export default {
       this.cards = rawData.data
       this.cards.forEach((item) => { item.date = new Date(item.published_at).toGMTString().slice(0, 16) })
     },
-    clickHandler () {
-      window.open()
+    clickHandler (url) {
+      window.open(url)
     }
   },
 
