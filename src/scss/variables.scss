@@ -1,7 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
-
 $body-font-family: 'Gilroy';
-$heading-font-family: 'Bebas Neue';
+$heading-font-family: $body-font-family !default;
 $headings: (
   'h1': (
     'size': 46px,
@@ -22,9 +20,5 @@ $headings: (
   'h5': (
     'size': 18px,
     'line-height': 100%
-  ),
-  'p': (
-    'size': 16px,
-    'line-height': 100%
   )
-)
+);

@@ -1,6 +1,6 @@
-# dgtek-in-media
+# dgtek-covid
 
-[**demo**](https://garevna.github.io/dgtek-in-media/)
+[**demo**](https://garevna.github.io/dgtek-covid/)
 
 ## Project setup
 ```

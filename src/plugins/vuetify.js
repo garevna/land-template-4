@@ -20,21 +20,21 @@ export default new Vuetify({
   theme: {
     themes: {
       light: {
-        primary: '#4CAF50',
-        secondary: '#75BE00',
-        buttons: '#72BF44',
-        deepgreen: '#20731C',
-        homefone: '#FAFAFA',
-        plansfone: '#E5FDD7',
+        primary: '#FF0E00',
+        secondary: '#E82F37',
+        buttons: '#F54436',
+        homefone: '#FEFEFE',
+        inputs: '#EFEFEF',
+        activefield: '#D9D9D9',
         warning: '#FAFF00'
       },
       dark: {
-        primary: '#4CAF50',
-        secondary: '#75BE00',
-        buttons: '#72BF44',
-        greentext: '#20731C',
-        homefone: '#FAFAFA',
-        plansfone: '#E5FDD7',
+        primary: '#FF0E00',
+        secondary: '#E82F37',
+        buttons: '#F54436',
+        homefone: '#FEFEFE',
+        fields: '#EFEFEF',
+        activefield: '#D9D9D9',
         warning: '#FAFF00'
       }
     }

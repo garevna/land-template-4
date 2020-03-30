@@ -6,8 +6,8 @@ import App from './App'
 import vuetify from './plugins/vuetify'
 Vue.use(vuetify)
 
-import '@/fonts.scss'
-import '@/variables.scss'
+import '@/scss/fonts.scss'
+import '@/scss/variables.scss'
 
 Vue.config.productionTip = false
 

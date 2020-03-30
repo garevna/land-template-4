@@ -1,7 +1,7 @@
 {
-  "name": "dgtek-in-media",
+  "name": "dgtek-covid",
   "version": "1.0.0",
-  "description": "Landing page DGTek in media",
+  "description": "Landing page DGTek-COVID-19",
   "main": "index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
