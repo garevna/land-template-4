@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="homefone ma-0 pa-0" :style="{ height: fullHeight }">
+  <v-container fluid class="homefone ma-0 pa-0">
     <v-img src="@/components/red-background.png" :height="backgroundHeight" position="center" class="mx-0 px-0"></v-img>
       <v-card flat class="white-title transparent mx-auto" :style="{ marginTop: whiteTextMarginTop }">
         <v-card-title>
