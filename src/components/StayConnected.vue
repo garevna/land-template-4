@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fill-height>
     <v-card flat class="transparent mx-auto">
       <v-card-title><h1>Stay connected</h1></v-card-title>
       <v-card-text>
