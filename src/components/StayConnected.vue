@@ -50,7 +50,7 @@
           </v-col>
         </v-row>
         <v-row align="center" justify="center">
-          <v-col cols="12">
+          <v-col cols="12" class="submit">
             <v-btn
               dark
               class="buttons"
@@ -83,6 +83,18 @@ p {
   font-weight: bold;
   width: 100%;
   text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  h1 { font-size: 28px; }
+  p {
+    font-size: 14px;
+    color: #757575;
+  }
+  .submit {
+    width: 100%;
+    text-align: center;
+  }
 }
 </style>
 

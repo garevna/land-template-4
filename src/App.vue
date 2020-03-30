@@ -46,6 +46,9 @@
       <v-row class="mx-0 px-0">
         <StayConnected/>
       </v-row>
+      <v-row>
+        <Footer />
+      </v-row>
     </v-container>
   </v-app>
 </template>
@@ -92,6 +95,7 @@ import UserContact from '@/components/UserContact.vue'
 import BandWidth from '@/components/BandWidth.vue'
 import FAQ from '@/components/FAQ.vue'
 import StayConnected from '@/components/StayConnected.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'App',
@@ -100,7 +104,8 @@ export default {
     UserContact,
     BandWidth,
     FAQ,
-    StayConnected
+    StayConnected,
+    Footer
   },
   data: function () {
     return {
