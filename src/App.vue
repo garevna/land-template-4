@@ -5,7 +5,6 @@
       <v-row justify="center" class="pa-0 ma-0">
         <v-sheet
           width="100%"
-          height="900"
           color="homefone"
           tile
           class="mx-auto"
@@ -16,7 +15,7 @@
                 <v-img src="@/components/map-picture.svg" height="800" contain style="opacity:0.2;"></v-img>
                 <v-card
                         :width="viewport.width > 600 ? 450 : 341"
-                        height="858"
+                        :height="viewport.width > 600 ? 858 : 740"
                         flat
                         class="transparent mx-auto pa-0"
                         style="margin-top: -870px"
@@ -25,13 +24,12 @@
                 </v-card>
               </v-card>
             </v-col>
-            <v-col cols="12" md="6">
+            <v-col cols="12" md="6" class="aside-col">
               <v-card
                       flat
-                      width="450"
-                      height="858"
-                      class="transparent mx-auto pa-4"
+                      class="aside-card transparent"
               >
+                <Aside />
               </v-card>
             </v-col>
           </v-row>
@@ -66,6 +64,7 @@ html, body {
 } */
 body {
   background: #E5E5E5;
+  overflow-x:hidden;
 }
 .headers {
   font-family: 'Bebas Neue';
@@ -86,11 +85,25 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #72BF44;
 }
+
+@media screen and (max-width: 320px) {
+  .aside-col {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .aside-card {
+    width: 100%;
+    margin-left: -10px;
+    padding: 0;
+  }
+}
 </style>
 
 <script>
 
 import Header from '@/components/Header.vue'
+import Aside from '@/components/Aside.vue'
 import UserContact from '@/components/UserContact.vue'
 import BandWidth from '@/components/BandWidth.vue'
 import FAQ from '@/components/FAQ.vue'
@@ -101,6 +114,7 @@ export default {
   name: 'App',
   components: {
     Header,
+    Aside,
     UserContact,
     BandWidth,
     FAQ,
