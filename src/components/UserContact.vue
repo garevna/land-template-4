@@ -8,38 +8,38 @@
             placeholder="Name*"
             outlined
             v-model="name"
-            class="inputs"
+            class="user-inputs"
       ></v-text-field>
       <v-text-field
             placeholder="Email*"
             outlined
             v-model="email"
-            class="inputs"
+            class="user-inputs"
       ></v-text-field>
       <v-text-field
             placeholder="Address*"
             outlined
             v-model="address"
-            class="inputs"
+            class="user-inputs"
       ></v-text-field>
       <v-text-field
             placeholder="Postcode*"
             outlined
             v-model="postcode"
-            class="inputs"
+            class="user-inputs"
       ></v-text-field>
       <v-text-field
             placeholder="State*"
             outlined
             v-model="state"
-            class="inputs"
+            class="user-inputs"
       ></v-text-field>
       <v-textarea
             placeholder="Tell us how covid-19 impacted you*"
             outlined
             auto-grow
             v-model="message"
-            class="inputs"
+            class="user-inputs"
       ></v-textarea>
     </v-card-text>
     <v-card-actions class="text-center">
@@ -49,12 +49,21 @@
           height="65"
           color="buttons"
           class="submit-button"
-      >GET OFFER</v-btn>
+      >SUBMIT</v-btn>
     </v-card-actions>
   </v-card>
 </template>
 
 <style scoped>
+
+.v-text-field.v-text-field--enclosed {
+  margin-bottom: -16px!important;
+}
+/*
+.v-btn__content {
+  font-size: 18px!important;
+} */
+
 .user-info {
   border-radius: 15px!important;
 }
@@ -65,13 +74,14 @@ h3 {
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
-  margin-bottom: 30px;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
-.inputs {
+.user-inputs {
   font-family: Gilroy;
   font-style: normal;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 150%;
   color: #656565;
 }
@@ -79,19 +89,22 @@ h3 {
   font-family: Gilroy;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 18px!important;
   line-height: 150%;
   text-transform: capitalize;
 }
 
 @media screen and (max-width: 600px) {
+  .v-btn__content {
+    font-size: 16px!important;
+  }
   .user-info {
     width: 340px!important;
   }
   h3 {
     font-size: 18px;
   }
-  .inputs {
+  .user-inputs {
     font-size: 14px;
   }
   .submit-button {
@@ -105,7 +118,7 @@ h3 {
   h3 {
     font-size: 18px;
   }
-  .inputs {
+  .user-inputs {
     font-size: 14px;
   }
   .submit-button {

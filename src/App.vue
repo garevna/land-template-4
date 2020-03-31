@@ -17,6 +17,7 @@
                         :width="viewport.width > 600 ? 450 : 340"
                         flat
                         class="user-contact transparent mx-auto pa-0"
+                        style="margin-bottom: 120px"
                 >
                   <UserContact/>
                 </v-card>

@@ -1,6 +1,6 @@
 <template>
   <v-container class="homefone mx-auto my-12 px-0 py-12">
-    <v-card flat class="transparent mx-auto">
+    <v-card flat class="transparent mx-auto" max-width="980">
       <v-card-title>
         <h1>FAQ</h1>
       </v-card-title>

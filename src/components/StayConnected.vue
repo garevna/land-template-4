@@ -1,6 +1,6 @@
 <template>
   <v-container fill-height>
-    <v-card flat class="transparent mx-auto">
+    <v-card flat class="transparent mx-auto" max-width="900">
       <v-card-title><h1>Stay connected</h1></v-card-title>
       <v-card-text>
         <p>Send us an enquiry and a member of our team will get back to you as soon as possible to answer any questions you may have or guide you through the connection process</p>

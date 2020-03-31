@@ -2,8 +2,7 @@
         <v-card
               flat
               class="aside-card transparent mx-3"
-              width="450"
-              height="480"
+              width="480"
         >
           <v-card-title>
             <h1>Our Offer To The Community</h1>
@@ -22,8 +21,7 @@
           </v-card-text>
           <v-card-text>
             <p class="small">
-              *to pensioners, retirees and residents in aged<br>
-              care facilities<br>
+              *to pensioners, retirees and residents in aged care facilities<br>
               **to all families impacted by COVID-19
             </p>
           </v-card-text>
@@ -43,7 +41,8 @@ h1 {
   font-size: 42px;
   line-height: 42px;
   color: #1A1A1A;
-  margin-left: 16px;
+  font-weight: 100;
+  letter-spacing: 0.1rem;
 }
 h3 {
   font-family: Gilroy;
@@ -63,17 +62,15 @@ p {
   font-size: 18px;
   line-height: 150%;
   color: #665566;
-  margin-left: 16px;
 }
 .small {
   font-size: 14px;
-  padding-left: 32px;
 }
 
 @media screen and (max-width: 900px) {
   .aside-card {
-    height: 540px;
-    padding-top: 50px;
+    margin-top: -180px;
+    margin-bottom: 80px;
   }
   h1 {
     font-size: 28px;
@@ -88,24 +85,19 @@ p {
 }
 @media screen and (max-width: 320px) {
   .aside-card {
-    height: 580px!important;
-    padding-top: 40px;
-    margin: 0;
+    margin-top: -180px;
+    margin-bottom: 80px;
   }
   h1 {
     font-size: 28px;
     line-height: 28px;
-    padding-left: 0px;
+    letter-spacing: normal;
   }
   h3 {
     font-size: 18px;
   }
   p {
     font-size: 14px;
-    padding-left: 0px;
-  }
-  .small {
-    padding-left: 0px;
   }
 }
 

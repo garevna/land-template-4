@@ -62,6 +62,8 @@
 h1 {
   width: 100%;
   font-size: 42px;
+  font-weight: 100;
+  letter-spacing: 0.15rem;
   line-height: 54px;
   color: #FFFFFF;
   text-align: left;

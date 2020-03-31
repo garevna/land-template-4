@@ -3,7 +3,7 @@
     <v-img :src="headerBackImage" :height="headerHeight" :position="headerBackPosition" class="mx-0 px-0">
       <v-row class="mx-0 px-0">
         <v-col cols="12" lg="6" class="mx-0 px-0">
-          <v-card flat class="header-card transparent text-center">
+          <v-card flat class="header-card transparent">
             <v-card-title class="mx-0">
               <h1>Helping The Community</h1>
             </v-card-title>
@@ -36,10 +36,11 @@
 .header-card {
   margin-left: 130px!important;
   margin-top: 300px;
+  width: 108%;
 }
 
 h1 {
-  width: 100%;
+  width: 110%;
   font-size: 56px;
   line-height: 56px;
   color: #FFFFFF;
@@ -63,7 +64,7 @@ h4 {
   width: 80%;
   position: absolute;
   right: 44px;
-  top: -20px;
+  top: 40%;
 }
 
   @media screen and (min-width: 2600px) {
@@ -72,6 +73,7 @@ h4 {
     .header-card {
       margin-left: 30%!important;
       margin-top: 20%;
+      width: 80%;
     }
     .picture {
       width: 900px;
@@ -88,6 +90,7 @@ h4 {
     .header-card {
       margin-left: 0!important;
       margin-top: 90px;
+      width: 100%;
     }
     .picture {
       width: 50%;
@@ -98,11 +101,12 @@ h4 {
 
   @media screen and (max-width: 599px) {
     h1, h4 { text-align: center; }
-    h1 { font-size: 36px; }
+    h1 { font-size: 36px; letter-spacing: normal; }
     h4 { font-size: 16px; }
     .header-card {
       margin-left: 0!important;
       margin-top: 100px;
+      width: 100%;
     }
     .picture {
       width: 80%;
