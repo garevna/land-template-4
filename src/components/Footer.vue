@@ -5,6 +5,9 @@
         <v-row>
           <v-col cols="12" lg="4">
             <v-card flat class="transparent mx-auto">
+              <v-card-actions>
+                <v-img src="@/components/dgtek-logo.svg" width="80" height="52" contain position="left center"></v-img>
+              </v-card-actions>
               <v-card-title>
                 <h4>About us</h4>
               </v-card-title>

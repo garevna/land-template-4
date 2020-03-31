@@ -13,7 +13,7 @@
               :key="index"
               class="homefone"
           >
-            <v-expansion-panel-header height="64"><h4 class="my-12">{{ item.question }}</h4></v-expansion-panel-header>
+            <v-expansion-panel-header height="64"><h4 class="my-0">{{ item.question }}</h4></v-expansion-panel-header>
             <v-expansion-panel-content>
               <p>{{ item.answer }}</p>
             </v-expansion-panel-content>
@@ -58,13 +58,6 @@ p {
   color: #2D2D2D;
 }
 
-.cards {
-  border-radius: 15px;
-  width: 380px;
-  height: 400px;
-  padding-top: 20px;
-}
-
 @media screen and (max-width: 600px) {
   h1 { font-size: 28px; margin-left: 20px; }
   h4 {
@@ -74,23 +67,6 @@ p {
   }
   p {
     font-size: 14px;
-  }
-  .cards {
-    width: 340px;
-    height: 235px;
-    margin-left: calc(50% - 170px);
-    padding-top: 20px;
-
-  }
-  .icons, h3 {
-    display: inline-block;
-  }
-  h3 {
-    margin-top: 0px;
-    vertical-align: bottom;
-  }
-  .icons {
-    margin-right: 16px;
   }
 }
 
@@ -106,28 +82,6 @@ p {
     margin-left: 24px;
     max-width: 280px;
     line-height: 32px;
-  }
-  .cards {
-    width: 340px;
-    height: 260px;
-    margin-left: calc(50% - 170px);
-  }
-  .icons, h3 {
-    display: inline-block;
-  }
-  .icons {
-    margin-right: 10px;
-  }
-  h3 {
-    margin-top: 0px;
-    vertical-align: bottom;
-  }
-}
-
-@media screen and (min-width: 1904px) {
-  .white-title * {
-    width: 100%;
-    text-align: center;
   }
 }
 </style>
