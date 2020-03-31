@@ -14,11 +14,9 @@
               <v-card flat class="transparent mx-0">
                 <v-img src="@/components/map-picture.svg" height="800" contain style="opacity:0.2;"></v-img>
                 <v-card
-                        :width="viewport.width > 600 ? 450 : 341"
-                        :height="viewport.width > 600 ? 858 : 740"
+                        :width="viewport.width > 600 ? 450 : 340"
                         flat
-                        class="transparent mx-auto pa-0"
-                        style="margin-top: -870px"
+                        class="user-contact transparent mx-auto pa-0"
                 >
                   <UserContact/>
                 </v-card>
@@ -45,7 +43,12 @@
         <StayConnected/>
       </v-row>
       <v-row>
-        <Footer />
+        <section id="footer">
+        <div class="base-title">
+          <a href="#footer" class="core-goto"></a>
+          <Footer />
+        </div>
+      </section>
       </v-row>
     </v-container>
   </v-app>
@@ -65,6 +68,9 @@ html, body {
 body {
   background: #E5E5E5;
   overflow-x:hidden;
+}
+.user-contact {
+  margin-top: -920px;
 }
 .headers {
   font-family: 'Bebas Neue';
@@ -86,7 +92,26 @@ body {
   background: #72BF44;
 }
 
+@media screen and (max-width: 600px) {
+  .user-contact {
+    margin-top: -900px;
+  }
+  .aside-col {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .aside-card {
+    width: 100%;
+    margin-left: -10px;
+    padding: 0;
+  }
+}
+
 @media screen and (max-width: 320px) {
+  .user-contact {
+    margin-top: -900px;
+  }
   .aside-col {
     width: 100%;
     margin: 0;
