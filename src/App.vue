@@ -43,7 +43,7 @@
         <StayConnected/>
       </v-row>
       <v-row>
-        <section id="footer">
+        <section id="footer" class="mx-auto">
         <div class="base-title">
           <a href="#footer" class="core-goto"></a>
           <Footer />
