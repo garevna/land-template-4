@@ -7,13 +7,23 @@
       <v-card-text>
         <v-expansion-panels
               v-model="panel"
+              accordion
+              focusable
+              flat
+              hover
+              tile
         >
           <v-expansion-panel
               v-for="(item, index) in faq"
               :key="index"
-              class="homefone"
           >
-            <v-expansion-panel-header height="64"><h5 class="my-0">{{ item.question }}</h5></v-expansion-panel-header>
+            <v-expansion-panel-header height="64">
+              <h5 class="my-0">{{ item.question }}</h5>
+              <template v-slot:actions>
+                <v-icon color="#444">$expand</v-icon>
+              </template>
+            </v-expansion-panel-header>
+            <!-- <v-icon slot="actions" color="primary">$vuetify.icons.expand</v-icon> -->
             <v-expansion-panel-content class="answer" v-html="item.answer">
             </v-expansion-panel-content>
           </v-expansion-panel>
@@ -137,6 +147,7 @@ export default {
   },
   mounted () {
     window.addEventListener('resize', this.onResize, { passive: true })
+    console.log(this.$vuetify.icons.expand)
   },
   beforeDestroy () {
     if (typeof window !== 'undefined') {

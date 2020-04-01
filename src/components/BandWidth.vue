@@ -30,7 +30,7 @@
                     :style="{ marginTop: cardsMarginTop }"
                 >
                   <v-img
-                      class="icons"
+                      class="red-icons"
                       :src="card.image"
                       :width="iconSize"
                       :height="iconSize"
@@ -86,6 +86,9 @@ p {
   height: 400px;
   padding-top: 20px;
 }
+.red-icons {
+  border-radius: 0!important;
+}
 
 @media screen and (max-width: 600px) {
   h2 { margin-left: 20px; }
@@ -103,10 +106,10 @@ p {
     padding-top: 20px;
 
   }
-  .icons, h3 {
+  .red-icons, h3 {
     display: inline-block;
   }
-  .icons {
+  .red-icons {
     margin-right: 16px;
   }
 }
@@ -126,10 +129,10 @@ p {
     padding-top: 20px;
 
   }
-  .icons, h3 {
+  .red-icons, h3 {
     display: inline-block;
   }
-  .icons {
+  .red-icons {
     margin-right: 16px;
   }
 }
@@ -152,10 +155,10 @@ p {
     width: 98%;
     height: max-content;
   }
-  .icons, h3 {
+  .red-icons, h3 {
     display: inline-block;
   }
-  .icons {
+  .red-icons {
     margin-right: 10px;
   }
 }
