@@ -1,11 +1,11 @@
 <template>
   <v-container fill-height>
     <v-card flat class="transparent mx-auto" max-width="900">
-      <v-card-title><h1>Stay connected</h1></v-card-title>
+      <v-card-title><h2>Stay connected</h2></v-card-title>
       <v-card-text>
         <p>Send us an enquiry and a member of our team will get back to you as soon as possible to answer any questions you may have or guide you through the connection process</p>
       </v-card-text>
-      <v-row align="center" justify="center" class="py-12">
+      <v-row align="center" justify="center" class="py-3 py-md-12">
         <v-col cols="12">
           <v-row align="center" justify="center">
             <v-col cols="12" lg="4">
@@ -49,7 +49,7 @@
             ></v-textarea>
           </v-col>
         </v-row>
-        <v-row align="center" justify="center">
+        <v-row align="center" justify="center" class="py-3">
           <v-col cols="12" class="submit">
             <v-btn
               dark
@@ -66,34 +66,24 @@
 </template>
 
 <style scoped>
-h1 {
+h2 {
   width: 100%;
   text-align: center;
-  font-family: 'Gilroy';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 46px;
-  line-height: 150%;
-  color: #000000;
 }
 p {
-  color: #0b0b0b;
-  font-size: 24px;
-  line-height: 32px;
   font-weight: bold;
   width: 100%;
   text-align: center;
+  color: #757575;
 }
 
-@media screen and (max-width: 600px) {
-  h1 { font-size: 28px; }
-  p {
-    font-size: 14px;
-    color: #757575;
-  }
+@media screen and (max-width: 900px) {
   .submit {
     width: 100%;
     text-align: center;
+  }
+  .v-text-field.v-text-field--enclosed {
+    margin-bottom: -32px!important;
   }
 }
 </style>

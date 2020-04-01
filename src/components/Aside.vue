@@ -5,7 +5,7 @@
               width="480"
         >
           <v-card-title>
-            <h1>Our Offer To The Community</h1>
+            <h2>Our Offer To The Community</h2>
           </v-card-title>
           <v-card-text>
             <p>
@@ -16,8 +16,8 @@
           </v-card-text>
           <v-card-text>
             <p style="margin-left: 0!important"><b>Exactly what’s on offer:</b></p>
-            <h3>6 months <span class="red--text">of free internet*</span></h3>
-            <h3>3 months <span class="red--text">of free internet**</span></h3>
+            <h5>6 months <span class="red--text">of free internet*</span></h5>
+            <h5>3 months <span class="red--text">of free internet**</span></h5>
           </v-card-text>
           <v-card-text>
             <p class="small">
@@ -34,33 +34,17 @@
   padding-top: 150px;
 }
 
-h1 {
-  font-family: Bebas Neue;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 42px;
-  line-height: 42px;
+h2 {
   color: #1A1A1A;
-  font-weight: 100;
   letter-spacing: 0.1rem;
 }
-h3 {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 150%;
+h4 {
   color: #665566;
 }
 .red--text {
   color: #F54436;
 }
 p {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 150%;
   color: #665566;
 }
 .small {
@@ -72,32 +56,11 @@ p {
     margin-top: -180px;
     margin-bottom: 80px;
   }
-  h1 {
-    font-size: 28px;
-    line-height: 28px;
-  }
-  h3 {
-    font-size: 18px;
-  }
-  p {
-    font-size: 14px;
-  }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 600px) {
   .aside-card {
-    margin-top: -180px;
+    margin-top: -90px;
     margin-bottom: 80px;
-  }
-  h1 {
-    font-size: 28px;
-    line-height: 28px;
-    letter-spacing: normal;
-  }
-  h3 {
-    font-size: 18px;
-  }
-  p {
-    font-size: 14px;
   }
 }
 

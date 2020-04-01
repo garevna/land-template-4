@@ -1,7 +1,7 @@
 <template>
   <v-card class="user-info mx-auto pa-6">
     <v-card-title>
-      <h3>Get Our Limited Offer!</h3>
+      <h4>Get Our Limited Offer!</h4>
     </v-card-title>
     <v-card-text class="mx-0 px-0" width="100%">
       <v-text-field
@@ -59,28 +59,20 @@
 .v-text-field.v-text-field--enclosed {
   margin-bottom: -16px!important;
 }
-/*
-.v-btn__content {
-  font-size: 18px!important;
-} */
 
 .user-info {
   border-radius: 15px!important;
 }
-h3 {
+h4 {
   width: 100%;
   text-align: center;
-  font-family: 'Gilroy';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
   margin-top: 32px;
   margin-bottom: 32px;
 }
 .user-inputs {
   font-family: Gilroy;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 18px;
   line-height: 150%;
   color: #656565;
@@ -101,9 +93,6 @@ h3 {
   .user-info {
     width: 340px!important;
   }
-  h3 {
-    font-size: 18px;
-  }
   .user-inputs {
     font-size: 14px;
   }
@@ -114,9 +103,6 @@ h3 {
 @media screen and (max-width: 320px) {
   .user-info {
     width: 300px!important;
-  }
-  h3 {
-    font-size: 18px;
   }
   .user-inputs {
     font-size: 14px;

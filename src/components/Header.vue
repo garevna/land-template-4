@@ -8,7 +8,7 @@
               <h1>Helping The Community</h1>
             </v-card-title>
             <v-card-text class="mx-0">
-              <h4>The COVID-19 pandemic is the defining challenge of our generation. Here’s how we’re helping.</h4>
+              <h5>The COVID-19 pandemic is the defining challenge of our generation. Here’s how we’re helping.</h5>
             </v-card-text>
           </v-card>
         </v-col>
@@ -41,21 +41,12 @@
 
 h1 {
   width: 110%;
-  font-size: 56px;
-  line-height: 56px;
-  color: #FFFFFF;
   text-align: left;
-  font-family: 'Bebas Neue';
   letter-spacing: 0.16rem;
-  word-break: normal;
-  font-weight: 100;
 }
 
-h4 {
+h5 {
   color: #FFFFFF;
-  font-size: 24px;
-  line-height: 150%;
-  font-family: 'Gilroy';
   text-align: left;
   letter-spacing: 0.1rem;
 }
@@ -69,7 +60,7 @@ h4 {
 
   @media screen and (min-width: 2600px) {
     h1 { font-size: 72px; }
-    h4 { font-size: 40px; }
+    h5 { font-size: 40px; }
     .header-card {
       margin-left: 30%!important;
       margin-top: 20%;
@@ -84,9 +75,7 @@ h4 {
   }
 
   @media screen and (max-width: 900px) {
-    h1, h4 { text-align: center; }
-    h1 { font-size: 46px; }
-    h4 { font-size: 20px; }
+    h1, h5 { text-align: center; }
     .header-card {
       margin-left: 0!important;
       margin-top: 90px;
@@ -100,9 +89,8 @@ h4 {
   }
 
   @media screen and (max-width: 599px) {
-    h1, h4 { text-align: center; }
+    h1, h5 { text-align: center; }
     h1 { font-size: 36px; letter-spacing: normal; }
-    h4 { font-size: 16px; }
     .header-card {
       margin-left: 0!important;
       margin-top: 100px;
@@ -116,12 +104,10 @@ h4 {
   }
 
   @media screen and (max-width: 320px) {
-    h1, h4 { width: 100%; text-align: center; }
+    h1, h5 { width: 100%; text-align: center; }
     h1 {
-      font-size: 34px;
       letter-spacing: normal;
     }
-    h4 { font-size: 12px; }
     .header-card {
       margin-left: 0px;
       margin-top: 130px;
@@ -136,13 +122,8 @@ h4 {
 
 <script>
 
-// import TopLeftCornerWithLogo from '@/components/TopLeftCornerWithLogo.vue'
-
 export default {
   name: 'Header',
-  components: {
-    // TopLeftCornerWithLogo
-  },
   data: function () {
     return {
       viewport: {
@@ -158,20 +139,9 @@ export default {
     headerBackImage () {
       return this.viewport.width >= 1904 ? require('@/components/header-back-large.png') : this.viewport.width < 900 ? require('@/components/header-back-small.png') : require('@/components/header-back.png')
     },
-    textCardMarginTop () {
-      return this.viewport.width >= 1904 ? '400px' : this.viewport.width > 900 ? '300px' : '140px'
-    },
-    headerBackWidth () {
-      console.log(this.viewport.width)
-      console.log(this.viewport.width >= 1904 ? (this.viewport.width * 2 + 'px') : this.viewport.width)
-      return this.viewport.width >= 1904 ? (this.viewport.width * 2 + 'px') : this.viewport.width
-    },
     headerBackPosition () {
       console.log(this.viewport.width >= 1904 ? 'center top' : 'left top')
       return this.viewport.width >= 1904 ? 'center top' : 'left top'
-    },
-    imageWidth () {
-      return this.viewport.width >= 1440 ? '705px' : '320px'
     }
   },
   methods: {

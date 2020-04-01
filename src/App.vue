@@ -73,11 +73,141 @@ body {
 .user-contact {
   margin-top: -920px;
 }
-.headers {
+
+h1, h2, h3 {
   font-family: 'Bebas Neue';
 }
-.other {
+h4, h5, p {
   font-family: 'Gilroy';
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 150%;
+  font-weight: 200;
+  letter-spacing: 0.08rem;
+  color: #fff;
+}
+h2 {
+  font-size: 42px;
+  line-height: 150%;
+  font-weight: 100;
+  letter-spacing: 0.05rem;
+  color: #000;
+}
+h3 {
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: 100;
+  letter-spacing: 0.04rem;
+  color: #000;
+}
+h4 {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.02rem;
+  color: #000;
+  line-height: 150%;
+}
+h5 {
+  font-size: 24px;
+  line-height: 150%;
+  font-weight: medium;
+}
+p {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  color: #665566;
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    font-size: 36px;
+    letter-spacing: 0.02rem;
+  }
+  h2 { font-size: 28px; }
+  h3 { font-size: 24px; }
+  h4, h5 { font-size: 18px; }
+  p { font-size: 16px; }
+}
+
+@media screen and (max-width: 360px) {
+  /* h1 {
+    font-size: 36px;
+    letter-spacing: 0.02rem;
+  }
+  h2 { font-size: 28px; }
+  h3 { font-size: 24px; }
+  h4, h5 { font-size: 18px; } */
+  p { font-size: 14px; }
+}
+
+.v-card__title, h1, h4, h3, h4, h5, p {
+  word-break: normal!important;
+}
+
+</style>
+
+<style scoped>
+
+@media screen and (max-width: 900px) {
+  h1, h4 { text-align: center; }
+  h1 {
+    font-size: 36px;
+    /* letter-spacing: normal; */
+  }
+  /* h2 { font-size: 28px; }
+  h3 { font-size: 24px; }
+  h4, h5 { font-size: 18px; } */
+  .header-card {
+    margin-left: 0!important;
+    margin-top: 90px;
+    width: 100%;
+  }
+  .picture {
+    width: 50%;
+    right: 25%;
+    top: -100px;
+  }
+}
+@media screen and (max-width: 599px) {
+  h1, h4 { text-align: center; }
+  /* h1 {
+    font-size: 36px;
+    letter-spacing: normal;
+  } */
+  /* h4 { font-size: 16px; } */
+  .header-card {
+    margin-left: 0!important;
+    margin-top: 100px;
+    width: 100%;
+  }
+  .picture {
+    width: 80%;
+    right: 10%;
+    top: -100px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  h1, h4 { width: 100%; text-align: center; }
+  /* h1 {
+    font-size: 34px;
+    letter-spacing: normal;
+  } */
+  /* h4 { font-size: 12px; } */
+  .header-card {
+    margin-left: 0px;
+    margin-top: 130px;
+  }
+  .picture {
+    width: 80%;
+    right: 10%;
+    top: -50px;
+  }
 }
 
 ::-webkit-scrollbar {

@@ -9,7 +9,7 @@
                 <v-img src="@/components/dgtek-logo.svg" width="80" height="52" contain position="left center"></v-img>
               </v-card-actions>
               <v-card-title>
-                <h4>About us</h4>
+                <h6>About us</h6>
               </v-card-title>
               <v-card-text>
                 <p>
@@ -21,7 +21,7 @@
           <v-col cols="12" lg="2">
             <v-card flat class="transparent mx-auto">
               <v-card-title>
-                <h4>Company</h4>
+                <h6>Company</h6>
               </v-card-title>
               <v-card-text>
                 <p><a href="https://dgtek.net/products" target="_blank">Products</a></p>
@@ -35,7 +35,7 @@
           <v-col cols="12" lg="2">
             <v-card flat class="transparent mx-auto">
               <v-card-title>
-                <h4>Products</h4>
+                <h6>Products</h6>
               </v-card-title>
               <v-card-text>
                 <p><a href="https://dgtek.net/products/residential-internet" target="_blank">Residential Internet</a></p>
@@ -50,7 +50,7 @@
           <v-col cols="12" lg="2">
             <v-card flat class="transparent mx-auto">
               <v-card-title>
-                <h4>Client</h4>
+                <h6>Client</h6>
               </v-card-title>
               <v-card-text>
                 <p>Website Disclaimer</p>
@@ -62,7 +62,7 @@
           <v-col cols="12" lg="2">
             <v-card flat class="transparent mx-auto">
               <v-card-title>
-                <h4>Contacts</h4>
+                <h6>Contacts</h6>
               </v-card-title>
               <v-card-text>
                 <p>Phone:
@@ -96,20 +96,20 @@
 </template>
 
 <style scoped>
-h4 {
+h6, p {
   font-family: 'Gilroy';
   font-style: normal;
+}
+h6 {
   font-weight: bold;
   font-size: 14px;
   line-height: 17px;
   color: #000;
 }
 p {
-  font-family: Gilroy;
-  font-style: normal;
   font-weight: normal;
   font-size: 12px;
-  line-height: 17px;
+  line-height: 16px;
   color: #757575;
 }
 a {

@@ -3,11 +3,11 @@
     <v-img src="@/components/red-background.png" :height="backgroundHeight" position="center" class="mx-0 px-0"></v-img>
       <v-card flat class="white-title transparent mx-auto" :style="{ marginTop: whiteTextMarginTop }">
         <v-card-title>
-          <h1>All The Bandwidth You’ll Ever Need , Zero Congestion.</h1>
+          <h2>All The Bandwidth You’ll Ever Need , Zero Congestion.</h2>
         </v-card-title>
         <v-card-text>
-          <h4>We started building our fibre-to-the-home network in 2016.<br>
-            In all this time, we have maintained 99.9% uptime and have never delivered a speed below what we promised to a customer.</h4>
+          <h5>We started building our fibre-to-the-home network in 2016.<br>
+            In all this time, we have maintained 99.9% uptime and have never delivered a speed below what we promised to a customer.</h5>
         </v-card-text>
       </v-card>
       <v-container fluid>
@@ -55,44 +55,28 @@
   overflow: hidden;
 }
 
-.v-card__title, h1, h4, h3, p {
+.v-card__title, h1, h3, h5, p {
   word-break: normal!important;
 }
 
-h1 {
-  width: 100%;
-  font-size: 42px;
-  font-weight: 100;
-  letter-spacing: 0.15rem;
-  line-height: 54px;
+h2 {
   color: #FFFFFF;
   text-align: left;
   margin-left: 130px;
-  font-family: 'Bebas Neue';
 }
-h4 {
+
+h3 {
+  margin-top: 32px;
+}
+
+h5 {
   color: #FFFFFF;
-  font-size: 24px;
-  line-height: 150%;
-  font-family: 'Gilroy';
   text-align: left;
   margin-left: 130px;
   max-width: calc(100% - 260px);
 }
 
-h3 {
-  font-family: 'Bebas Neue';
-  font-size: 24px;
-  color: #000;
-  margin-top: 32px;
-}
-
 p {
-  font-family: Gilroy;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 161.5%;
   color: #2D2D2D;
 }
 
@@ -104,28 +88,46 @@ p {
 }
 
 @media screen and (max-width: 600px) {
-  h1 { font-size: 28px; margin-left: 20px; }
-  h4 {
-    font-size: 14px;
+  h2 { margin-left: 20px; }
+  h3 {
+    margin-top: 0px;
+    vertical-align: bottom;
+  }
+  h5 {
     max-width: 80%;
     margin-left: 10%;
   }
-  p {
-    font-size: 14px;
-  }
   .cards {
-    width: 340px;
-    height: 235px;
-    margin-left: calc(50% - 170px);
+    width: 80%;
+    height: max-content;
     padding-top: 20px;
 
   }
   .icons, h3 {
     display: inline-block;
   }
+  .icons {
+    margin-right: 16px;
+  }
+}
+@media screen and (max-width: 400px) {
+  h2 { margin-left: 20px; }
   h3 {
     margin-top: 0px;
     vertical-align: bottom;
+  }
+  h5 {
+    max-width: 80%;
+    margin-left: 10%;
+  }
+  .cards {
+    width: 90%;
+    height: max-content;
+    padding-top: 20px;
+
+  }
+  .icons, h3 {
+    display: inline-block;
   }
   .icons {
     margin-right: 16px;
@@ -133,32 +135,28 @@ p {
 }
 
 @media screen and (max-width: 320px) {
-  h1 {
-    font-size: 18px;
+  h2 {
     margin-left: 24px;
     max-width: 280px;
-    line-height: 32px;
   }
-  h4 {
-    font-size: 12px;
+  h3 {
+    margin-top: 0px;
+    vertical-align: bottom;
+  }
+  h5 {
     margin-left: 24px;
     max-width: 280px;
     line-height: 32px;
   }
   .cards {
-    width: 340px;
-    height: 260px;
-    margin-left: calc(50% - 170px);
+    width: 98%;
+    height: max-content;
   }
   .icons, h3 {
     display: inline-block;
   }
   .icons {
     margin-right: 10px;
-  }
-  h3 {
-    margin-top: 0px;
-    vertical-align: bottom;
   }
 }
 

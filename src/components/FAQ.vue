@@ -2,7 +2,7 @@
   <v-container class="homefone mx-auto my-12 px-0 py-12">
     <v-card flat class="transparent mx-auto" max-width="980">
       <v-card-title>
-        <h1>FAQ</h1>
+        <h2>FAQ</h2>
       </v-card-title>
       <v-card-text>
         <v-expansion-panels
@@ -13,7 +13,7 @@
               :key="index"
               class="homefone"
           >
-            <v-expansion-panel-header height="64"><h4 class="my-0">{{ item.question }}</h4></v-expansion-panel-header>
+            <v-expansion-panel-header height="64"><h5 class="my-0">{{ item.question }}</h5></v-expansion-panel-header>
             <v-expansion-panel-content class="answer" v-html="item.answer">
             </v-expansion-panel-content>
           </v-expansion-panel>
@@ -25,27 +25,16 @@
 
 <style scoped>
 
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-
 .v-card__title, h1, h4, h3, p {
   word-break: normal!important;
 }
 
-h1 {
+h2 {
   width: 100%;
-  font-size: 50px;
-  line-height: 54px;
   color: #000;
   text-align: center;
-  font-family: 'Roboto';
 }
 h4 {
-  color: #000;
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 28px;
   margin: 0;
 }
 
@@ -64,28 +53,19 @@ h4 {
 }
 
 @media screen and (max-width: 600px) {
-  h1 { font-size: 28px; margin-left: 20px; }
-  h4 {
-    font-size: 14px;
-    max-width: 80%;
-  }
+  h2 { margin-left: 20px; }
+  h5 { max-width: 80%; }
   .v-card__text {
     font-size: 14px!important;
   }
 }
 
 @media screen and (max-width: 320px) {
-  :root {
-    --font-size: '18px'
-  }
-  h1 {
-    font-size: 18px;
-    margin-left: 24px;
+  h2 {
     max-width: 280px;
-    line-height: 32px;
   }
-  h4 {
-    font-size: 12px;
+  h5 {
+    font-size: 13px;
     max-width: 280px;
     line-height: 32px;
   }
