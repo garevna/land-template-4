@@ -12,7 +12,7 @@
           <v-row class="mx-0 px-0">
             <v-col cols="12" md="6" class="mx-0 px-0">
               <v-card flat class="transparent mx-0">
-                <v-img src="@/components/map-picture.svg" height="800" contain style="opacity:0.2;"></v-img>
+                <v-img src="@/img/map-picture.svg" height="800" contain style="opacity:0.2;"></v-img>
                 <v-card
                         :width="viewport.width > 600 ? 450 : 340"
                         flat
@@ -63,9 +63,6 @@ html, body {
   margin: 0;
   padding: 0;
 }
-/* html {
-  background: #FF0E00;
-} */
 body {
   background: #E5E5E5;
   overflow-x:hidden;
@@ -135,13 +132,6 @@ p {
 }
 
 @media screen and (max-width: 360px) {
-  /* h1 {
-    font-size: 36px;
-    letter-spacing: 0.02rem;
-  }
-  h2 { font-size: 28px; }
-  h3 { font-size: 24px; }
-  h4, h5 { font-size: 18px; } */
   p { font-size: 14px; }
 }
 
@@ -155,13 +145,6 @@ p {
 
 @media screen and (max-width: 900px) {
   h1, h4 { text-align: center; }
-  h1 {
-    font-size: 36px;
-    /* letter-spacing: normal; */
-  }
-  /* h2 { font-size: 28px; }
-  h3 { font-size: 24px; }
-  h4, h5 { font-size: 18px; } */
   .header-card {
     margin-left: 0!important;
     margin-top: 90px;
@@ -175,11 +158,6 @@ p {
 }
 @media screen and (max-width: 599px) {
   h1, h4 { text-align: center; }
-  /* h1 {
-    font-size: 36px;
-    letter-spacing: normal;
-  } */
-  /* h4 { font-size: 16px; } */
   .header-card {
     margin-left: 0!important;
     margin-top: 100px;
@@ -194,11 +172,6 @@ p {
 
 @media screen and (max-width: 320px) {
   h1, h4 { width: 100%; text-align: center; }
-  /* h1 {
-    font-size: 34px;
-    letter-spacing: normal;
-  } */
-  /* h4 { font-size: 12px; } */
   .header-card {
     margin-left: 0px;
     margin-top: 130px;

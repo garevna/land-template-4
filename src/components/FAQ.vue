@@ -23,7 +23,6 @@
                 <v-icon color="#444">$expand</v-icon>
               </template>
             </v-expansion-panel-header>
-            <!-- <v-icon slot="actions" color="primary">$vuetify.icons.expand</v-icon> -->
             <v-expansion-panel-content class="answer" v-html="item.answer">
             </v-expansion-panel-content>
           </v-expansion-panel>
@@ -91,10 +90,6 @@ export default {
   name: 'FAQ',
   data: function () {
     return {
-      viewport: {
-        width: window.innerWidth,
-        height: window.innerHeight
-      },
       panel: null,
       faq: [
         {
@@ -134,24 +129,6 @@ export default {
             </div>`
         }
       ]
-    }
-  },
-  computed: {
-    //
-  },
-  methods: {
-    onResize () {
-      this.viewport.width = window.innerWidth
-      this.viewport.height = window.innerHeight
-    }
-  },
-  mounted () {
-    window.addEventListener('resize', this.onResize, { passive: true })
-    console.log(this.$vuetify.icons.expand)
-  },
-  beforeDestroy () {
-    if (typeof window !== 'undefined') {
-      window.removeEventListener('resize', this.onResize, { passive: true })
     }
   }
 }

@@ -9,7 +9,9 @@ export default new Vuetify({
   icons: {
     iconfont: 'mdi',
     values: {
-      expand: 'mdi-chevron-down'
+      expand: 'mdi-chevron-down',
+      valid: 'mdi-check-bold',
+      invalid: 'mdi-alert-outline'
     }
   },
   theme: {

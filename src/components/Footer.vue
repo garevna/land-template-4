@@ -6,7 +6,7 @@
           <v-col cols="12" lg="4">
             <v-card flat class="transparent mx-auto">
               <v-card-actions>
-                <v-img src="@/components/dgtek-logo.svg" width="80" height="52" contain position="left center" style="margin-left: 8px;"></v-img>
+                <v-img src="@/img/dgtek-logo.svg" width="80" height="52" contain position="left center" style="margin-left: 8px;"></v-img>
               </v-card-actions>
               <v-card-title>
                 <h6>About us</h6>
@@ -73,13 +73,13 @@
                 </p>
                 <p>
                   <a href="https://www.facebook.com/ISPDGtek/" target="_blank">
-                    <v-img src="@/components/fb.png" width="10" height="10" contain></v-img>
+                    <v-img src="@/img/fb.png" width="10" height="10" contain></v-img>
                   </a>
                   <a href="https://www.picuki.com/tag/DGTEK" target="_blank">
-                    <v-img src="@/components/instagram.png" width="10" height="10" contain></v-img>
+                    <v-img src="@/img/instagram.png" width="10" height="10" contain></v-img>
                   </a>
                   <a href="https://www.linkedin.com/company/dgtek/" target="_blank">
-                    <v-img src="@/components/linkedin.png" width="10" height="10" contain></v-img>
+                    <v-img src="@/img/linkedin.png" width="10" height="10" contain></v-img>
                   </a>
                 </p>
               </v-card-text>

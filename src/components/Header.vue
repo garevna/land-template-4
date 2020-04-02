@@ -15,7 +15,7 @@
         <v-col cols="12" lg="6" class="mx-0 px-0 mt-12">
           <v-card flat class="transparent mx-auto my-12 py-12 text-center">
             <v-img
-                  src="@/components/top-picture.png"
+                  src="@/img/top-picture.png"
                   class="picture">
             </v-img>
           </v-card>
@@ -137,7 +137,7 @@ export default {
       return this.viewport.width >= 1904 ? '1000px' : this.viewport.width >= 1440 ? '810px' : '770px'
     },
     headerBackImage () {
-      return this.viewport.width >= 1904 ? require('@/components/header-back-large.png') : this.viewport.width < 900 ? require('@/components/header-back-small.png') : require('@/components/header-back.png')
+      return this.viewport.width >= 1904 ? require('@/img/header-back-large.png') : this.viewport.width < 900 ? require('@/img/header-back-small.png') : require('@/img/header-back.png')
     },
     headerBackPosition () {
       console.log(this.viewport.width >= 1904 ? 'center top' : 'left top')

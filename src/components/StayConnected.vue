@@ -15,7 +15,7 @@
                     filled
                     height="48"
                     v-model="name"
-                    class="fields"
+                    color="#656565"
               ></v-text-field>
             </v-col>
             <v-col cols="12" lg="4">
@@ -25,7 +25,7 @@
                     filled
                     height="48"
                     v-model="email"
-                    class="fields"
+                    :color="emailColor"
               ></v-text-field>
             </v-col>
             <v-col cols="12" lg="4">
@@ -35,7 +35,7 @@
                     filled
                     height="48"
                     v-model="phone"
-                    class="fields"
+                    color="#656565"
               ></v-text-field>
             </v-col>
         </v-row>
@@ -43,9 +43,10 @@
           <v-col cols="12">
             <v-textarea
               filled
-              label="Your Message"
+              placeholder="Your Message"
               auto-grow
-              value=""
+              v-model="message"
+              color="#656565"
             ></v-textarea>
           </v-col>
         </v-row>
@@ -56,11 +57,13 @@
               class="buttons"
               width="220"
               height="48"
+              @click="sendData"
             >Submit</v-btn>
           </v-col>
         </v-row>
       </v-col>
     </v-row>
+    <Popup :opened.sync="popupOpened" />
   </v-card>
 </v-container>
 </template>
@@ -89,44 +92,63 @@ p {
 </style>
 
 <script>
+
+import Popup from '@/components/Popup.vue'
+
+const emailValidator = require('email-validator')
+
 export default {
+  components: {
+    Popup
+  },
   data () {
     return {
       name: '',
       phone: '',
       email: '',
-      message: ''
+      message: '',
+      popupOpened: false,
+      emailError: false,
+      emailColor: '',
+      normalColor: '#454545',
+      errorColor: '#FF0E00'
+    }
+  },
+  watch: {
+    email (val) {
+      this.emailError = !emailValidator.validate(val)
+      this.emailColor = this.emailError ? this.errorColor : this.normalColor
     }
   },
   methods: {
-    resetData () {
-      this.name = ''
-      this.phone = ''
-      this.email = ''
-      this.message = ''
+    initFields () {
+      ['name', 'phone', 'email', 'message'].forEach((item) => { this[item] = '' })
+      this.emailError = false
+      this.emailColor = this.normalColor
     },
-    sendData () {
-      const data = {
-        email: this.email,
-        phone: this.phone,
-        name: this.name,
-        subject: 'Confirmation of submission at www.dgtek.net',
-        message: this.message
-      }
-      this.$store.dispatch('CONTACT_MESSAGE', data)
-        .then((response) => { this.message = response })
+    async sendData () {
+      if (this.emailError) return
+      this.popupOpened = true
+      await (await fetch('https://dka.dgtek.net/api/frontend/mail', {
+        method: 'POST',
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: this.name,
+          email: this.email,
+          phone: this.phone,
+          subject: 'COVID-19: DGTek helping The Community',
+          message: this.message
+        })
+      })).json()
 
-      this.$parent.toggleSubmit()
-
-      const inputs = document.querySelectorAll('.form-input')
-      const textareas = document.querySelectorAll('.form-textarea')
-      const form = [...inputs, ...textareas]
-
-      this.resetData()
-
-      // eslint-disable-next-line no-param-reassign
-      return form.forEach((input) => { input.value = '' })
+      this.initFields()
     }
+  },
+  mounted () {
+    this.initFields()
   }
 }
 </script>

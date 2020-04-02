@@ -12,6 +12,7 @@
   "author": "garevna <irina.h.fylyppova@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "email-validator": "^2.0.4",
     "vue": "^2.6.11",
     "vuetify": "^2.2.11"
   },

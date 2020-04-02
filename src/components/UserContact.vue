@@ -5,38 +5,21 @@
     </v-card-title>
     <v-card-text class="mx-0 px-0" width="100%">
       <v-text-field
-            placeholder="Name*"
+            v-for="(item, prop) in items"
+            :key="prop"
+            :placeholder="item.placeholder"
             outlined
-            v-model="name"
+            :color="item.color"
+            v-model="item.value"
             class="user-inputs"
-      ></v-text-field>
-      <v-text-field
-            placeholder="Email*"
-            outlined
-            v-model="email"
-            class="user-inputs"
-      ></v-text-field>
-      <v-text-field
-            placeholder="Address*"
-            outlined
-            v-model="address"
-            class="user-inputs"
-      ></v-text-field>
-      <v-text-field
-            placeholder="Postcode*"
-            outlined
-            v-model="postcode"
-            class="user-inputs"
-      ></v-text-field>
-      <v-text-field
-            placeholder="State*"
-            outlined
-            v-model="state"
-            class="user-inputs"
+            :error="item.error"
+            :append-icon="item.validationIcon"
+            @input="validate(item)"
       ></v-text-field>
       <v-textarea
             placeholder="Tell us how covid-19 impacted you*"
             outlined
+            color="#656565"
             auto-grow
             v-model="message"
             class="user-inputs"
@@ -49,8 +32,10 @@
           height="65"
           color="buttons"
           class="submit-button"
+          @click="sendUserRequest"
       >SUBMIT</v-btn>
     </v-card-actions>
+    <Popup :opened.sync="popupOpened" />
   </v-card>
 </template>
 
@@ -115,40 +100,120 @@ h4 {
 
 <script>
 
+import Popup from '@/components/Popup.vue'
+
+const emailValidator = require('email-validator')
+
 export default {
   name: 'UserContact',
+  components: {
+    Popup
+  },
   data () {
     return {
-      viewport: {
-        width: window.innerWidth,
-        height: window.innerHeight
-      },
-      name: '',
-      email: '',
-      address: '',
-      postcode: '',
-      state: '',
-      message: ''
+      message: '',
+      normalColor: '#656565',
+      errorColor: '#FF0E00',
+      popupOpened: false,
+      items: {
+        name: {
+          value: '',
+          placeholder: 'Name*',
+          error: false,
+          color: '',
+          validationIcon: '',
+          validator () { this.error = this.value.length < 2 }
+        },
+        email: {
+          value: '',
+          placeholder: 'Email*',
+          error: false,
+          color: '',
+          validationIcon: '',
+          validator () {
+            this.error = !emailValidator.validate(this.value)
+            this.validationIcon = this.error ? '$invalid' : '$valid'
+            this.color = this.error ? '#FF0E00' : '#656565'
+          }
+        },
+        address: {
+          value: '',
+          placeholder: 'Address*',
+          error: false,
+          color: '',
+          validationIcon: '',
+          validator () { this.error = this.value.length < 5 }
+        },
+        postcode: {
+          value: '',
+          placeholder: 'Postcode*',
+          error: false,
+          color: '',
+          validationIcon: '',
+          validator () {
+            this.error = !Number(this.value) || Number(this.value) < 3000 || Number(this.value) > 9999
+          }
+        },
+        state: {
+          value: '',
+          placeholder: 'State*',
+          error: false,
+          color: '',
+          validationIcon: '',
+          validator () { this.error = this.value.length < 5 }
+        }
+      }
     }
   },
   computed: {
-    width () {
-      return this.viewport.width * 0.2
-    }
+    //
   },
   methods: {
-    onResize () {
-      this.viewport.width = window.innerWidth
-      this.viewport.height = window.innerHeight
+    initFields () {
+      for (const item in this.items) {
+        this.items[item].validationIcon = ''
+        this.items[item].error = false
+        this.items[item].color = this.normalColor
+        this.items[item].value = ''
+      }
+      this.message = ''
+    },
+    validate (item) {
+      item.validator()
+      item.validationIcon = item.error ? '$invalid' : '$valid'
+      item.color = item.error ? this.errorColor : this.normalColor
+    },
+    findErrors () {
+      let counter = 0
+      for (const item in this.items) {
+        this.validate(this.items[item])
+        counter += this.items[item].error
+      }
+      return counter > 0
+    },
+    async sendUserRequest () {
+      if (this.findErrors()) return
+      this.popupOpened = true
+      await (await fetch('https://dka.dgtek.net/api/frontend/mail', {
+        method: 'POST',
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: this.items.name.value,
+          email: this.items.email.value,
+          phone: '...',
+          subject: 'COVID-19: DGTek helping The Community',
+          message: `Your address: ${this.items.address.value}, ${this.items.postcode.value}, ${this.items.state.value}\nYour message:\n${this.message}`
+        })
+      })).json()
+
+      this.initFields()
     }
   },
   mounted () {
-    window.addEventListener('resize', this.onResize, { passive: true })
-  },
-  beforeDestroy () {
-    if (typeof window !== 'undefined') {
-      window.removeEventListener('resize', this.onResize, { passive: true })
-    }
+    this.initFields()
   }
 }
 

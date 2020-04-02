@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="homefone ma-0 pa-0">
-    <v-img src="@/components/red-background.png" :height="backgroundHeight" position="center" class="mx-0 px-0"></v-img>
+    <v-img src="@/img/red-background.png" :height="backgroundHeight" position="center" class="mx-0 px-0"></v-img>
       <v-card flat class="white-title transparent mx-auto" :style="{ marginTop: whiteTextMarginTop }">
         <v-card-title>
           <h2>All The Bandwidth You’ll Ever Need , Zero Congestion.</h2>
@@ -183,19 +183,19 @@ export default {
       },
       cards: [
         {
-          image: require('@/components/ico-1.svg'),
+          image: require('@/img/ico-1.svg'),
           title: 'Symmetrical Speeds',
           text: `DGTek gives you the same upload and download speed.
             Our upload speeds are 20x faster than the NBN.
             This means all your upload thirsty Skype, Zoom and Google Hangouts calls are handled, no issue!`
         },
         {
-          image: require('@/components/ico-2.svg'),
+          image: require('@/img/ico-2.svg'),
           title: 'Zero Congestion',
           text: 'Stream in 4K on every TV, laptop and phone in your house - no waiting time. With our 500Mbps fibre connection, we never miss a beat.'
         },
         {
-          image: require('@/components/ico-3.svg'),
+          image: require('@/img/ico-3.svg'),
           title: 'Reliability',
           text: 'In these uncertain times, the internet is our lifeline. It connects us to our work, our friends and our families. DGtek’s fibre has 99.9% uptime, how’s that for peace of mind?'
         }
