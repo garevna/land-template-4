@@ -8,6 +8,7 @@ Vue.use(vuetify)
 
 import '@/scss/fonts.scss'
 import '@/scss/variables.scss'
+import './registerServiceWorker'
 
 Vue.config.productionTip = false
 
