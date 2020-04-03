@@ -241,6 +241,9 @@ import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'App',
+  created () {
+    document.title = 'Covid-19 Support package'
+  },
   components: {
     Header,
     Aside,
