@@ -140,7 +140,6 @@ export default {
       return this.viewport.width >= 1904 ? require('@/img/header-back-large.png') : this.viewport.width < 900 ? require('@/img/header-back-small.png') : require('@/img/header-back.png')
     },
     headerBackPosition () {
-      console.log(this.viewport.width >= 1904 ? 'center top' : 'left top')
       return this.viewport.width >= 1904 ? 'center top' : 'left top'
     }
   },
