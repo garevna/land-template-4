@@ -2,27 +2,27 @@
         <v-card
               flat
               class="aside-card transparent mx-3"
-              width="480"
+              max-width="500"
         >
           <v-card-title>
-            <h2>Our Offer To The Community</h2>
+            <h2>{{ aside.header }}</h2>
           </v-card-title>
           <v-card-text>
             <p>
-              DGtek wants to help you adjust to the new normal.<br>
-              That’s why we are giving away ultra-fast fibre connections - for free. No strings attached.<br>
-              No clauses or contracts.
+              {{ aside.text }}
             </p>
           </v-card-text>
           <v-card-text>
-            <p style="margin-left: 0!important"><b>Exactly what’s on offer:</b></p>
-            <h5>6 months <span class="red--text">of free internet*</span></h5>
-            <h5>3 months <span class="red--text">of free internet**</span></h5>
+            <!-- <p style="margin-left: 0!important"><b>Exactly what’s on offer:</b></p> -->
+            <h5>{{ aside.offer[0].blackText }} <span class="red--text">{{ aside.offer[0].redText }}</span></h5>
+            <h5>{{ aside.offer[1].blackText }} <span class="red--text">{{ aside.offer[1].redText }}</span></h5>
           </v-card-text>
           <v-card-text>
             <p class="small">
-              *to pensioners, retirees and residents in aged care facilities<br>
-              **to all families impacted by COVID-19
+              {{ aside.smallText[0] }}
+            </p>
+            <p class="small">
+              {{ aside.smallText[1] }}
             </p>
           </v-card-text>
         </v-card>
@@ -65,3 +65,30 @@ p {
 }
 
 </style>
+
+<script>
+import { mapState } from 'vuex'
+
+export default {
+  name: 'Aside',
+  props: ['page'],
+  data () {
+    return {
+      // contact: false
+    }
+  },
+  computed: {
+    ...mapState('content', ['aside'])
+  },
+  watch: {
+    // contact (val) {
+    //   if (!val) return
+    //   this.$emit('update:page', 'contact')
+    //   this.contact = false
+    // }
+  },
+  mounted () {
+    console.log(this.aside)
+  }
+}
+</script>

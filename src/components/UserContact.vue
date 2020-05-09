@@ -1,7 +1,7 @@
 <template>
   <v-card class="user-info mx-auto pa-6">
     <v-card-title>
-      <h4>Get Our Limited Offer!</h4>
+      <h4>{{ userForm.title }}</h4>
     </v-card-title>
     <v-card-text class="mx-0 px-0" width="100%">
       <v-text-field
@@ -17,7 +17,7 @@
             @input="validate(item)"
       ></v-text-field>
       <v-textarea
-            placeholder="Tell us how covid-19 impacted you*"
+            :placeholder="userForm.messagePlaceholder"
             outlined
             color="#656565"
             auto-grow
@@ -33,7 +33,7 @@
           color="buttons"
           class="submit-button"
           @click="sendUserRequest"
-      >SUBMIT</v-btn>
+      >{{ userForm.button }}</v-btn>
     </v-card-actions>
     <Popup :opened.sync="popupOpened" />
   </v-card>
@@ -100,6 +100,7 @@ h4 {
 
 <script>
 
+import { mapState } from 'vuex'
 import Popup from '@/components/Popup.vue'
 
 const emailValidator = require('email-validator')
@@ -166,7 +167,7 @@ export default {
     }
   },
   computed: {
-    //
+    ...mapState('content', ['userForm', 'subject', 'textForUserMail'])
   },
   methods: {
     initFields () {
@@ -203,8 +204,8 @@ export default {
         body: JSON.stringify({
           name: this.items.name.value,
           email: this.items.email.value,
-          phone: '...',
-          subject: 'COVID-19: DGTek helping The Community',
+          phone: this.items.phone.value,
+          subject: this.subject,
           message: `Your address: ${this.items.address.value}, ${this.items.postcode.value}, ${this.items.state.value}\nYour message:\n${this.message}`
         })
       })).json()

@@ -5,10 +5,10 @@
         <v-col cols="12" lg="6" class="mx-0 px-0">
           <v-card flat class="header-card transparent">
             <v-card-title class="mx-0">
-              <h1>Helping The Community</h1>
+              <h1>{{ top.header }}</h1>
             </v-card-title>
             <v-card-text class="mx-0">
-              <h5>The COVID-19 pandemic is the defining challenge of our generation. Here’s how we’re helping.</h5>
+              <h5>{{ top.text }}</h5>
             </v-card-text>
           </v-card>
         </v-col>

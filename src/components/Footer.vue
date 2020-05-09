@@ -6,7 +6,7 @@
           <v-col cols="12" lg="4">
             <v-card flat class="transparent mx-auto">
               <v-card-actions>
-                <v-img src="@/img/dgtek-logo.svg" width="80" height="52" contain position="left center" style="margin-left: 8px;"></v-img>
+                <v-img src="@/assets/logo.png" width="80" height="52" contain position="left center" style="margin-left: 8px;"></v-img>
               </v-card-actions>
               <v-card-title>
                 <h6>About us</h6>

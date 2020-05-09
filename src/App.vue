@@ -1,7 +1,8 @@
 <template>
   <v-app light>
-    <Header />
-    <v-container fluid class="pa-0 ma-0">
+    <AppHeader :page="page"/>
+    <v-container fluid class="pa-0 my-0 mx-auto" style="max-width: 1000px">
+      <Top />
       <v-row justify="center" class="pa-0 ma-0">
         <v-sheet
           width="100%"
@@ -10,6 +11,14 @@
           class="mx-auto"
         >
           <v-row class="mx-0 px-0">
+            <v-col cols="12" md="6" class="aside-col">
+              <v-card
+                      flat
+                      class="aside-card transparent"
+              >
+                <Aside />
+              </v-card>
+            </v-col>
             <v-col cols="12" md="6" class="mx-0 px-0">
               <v-card flat class="transparent mx-0">
                 <v-img src="@/img/map-picture.svg" height="800" contain style="opacity:0.2;"></v-img>
@@ -23,26 +32,21 @@
                 </v-card>
               </v-card>
             </v-col>
-            <v-col cols="12" md="6" class="aside-col">
-              <v-card
-                      flat
-                      class="aside-card transparent"
-              >
-                <Aside />
-              </v-card>
-            </v-col>
           </v-row>
         </v-sheet>
       </v-row>
       <v-row class="mx-0 px-0">
-        <BandWidth/>
+        <Benefits />
       </v-row>
+      <!-- <v-row class="mx-0 px-0">
+        <Testimonials />
+      </v-row> -->
       <v-row class="mx-0 px-0">
         <FAQ/>
       </v-row>
-      <v-row class="mx-0 px-0">
+      <!-- <v-row class="mx-0 px-0">
         <StayConnected/>
-      </v-row>
+      </v-row> -->
       <v-row>
         <section id="footer" class="mx-auto">
         <div class="base-title">
@@ -57,8 +61,6 @@
 
 <style>
 
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
-
 html, body {
   margin: 0;
   padding: 0;
@@ -67,63 +69,52 @@ body {
   background: #E5E5E5;
   overflow-x:hidden;
 }
-.user-contact {
-  margin-top: -920px;
+
+.theme--light.v-application {
+  background: #FBFBFB!important;
 }
 
-h1, h2, h3 {
-  font-family: 'Bebas Neue';
+.user-contact {
+  margin-top: -720px;
 }
-h4, h5, p {
+
+h1, h2, h3, h4, h5, p {
   font-family: 'Gilroy';
+  letter-spacing: 0.02rem;
+  line-height: 150%;
+  font-style: normal;
+  color: #000;
 }
 
 h1 {
   font-size: 56px;
-  line-height: 150%;
-  font-weight: 200;
-  letter-spacing: 0.08rem;
-  color: #fff;
+  font-weight: 900;
 }
 h2 {
   font-size: 42px;
-  line-height: 150%;
-  font-weight: 100;
-  letter-spacing: 0.05rem;
-  color: #000;
+  font-weight: 600;
 }
 h3 {
   font-size: 24px;
-  line-height: 150%;
-  font-weight: 100;
-  letter-spacing: 0.04rem;
-  color: #000;
+  font-weight: 300;
 }
 h4 {
   font-size: 24px;
   font-weight: bold;
-  letter-spacing: 0.02rem;
-  color: #000;
-  line-height: 150%;
 }
 h5 {
   font-size: 24px;
-  line-height: 150%;
   font-weight: medium;
 }
 p {
-  font-family: Gilroy;
-  font-style: normal;
   font-weight: normal;
   font-size: 18px;
-  line-height: 150%;
   color: #665566;
 }
 
 @media screen and (max-width: 900px) {
   h1 {
     font-size: 36px;
-    letter-spacing: 0.02rem;
   }
   h2 { font-size: 28px; }
   h3 { font-size: 24px; }
@@ -231,30 +222,35 @@ p {
 
 <script>
 
-import Header from '@/components/Header.vue'
+import AppHeader from '@/components/AppHeader.vue'
+import Top from '@/components/Top.vue'
 import Aside from '@/components/Aside.vue'
 import UserContact from '@/components/UserContact.vue'
-import BandWidth from '@/components/BandWidth.vue'
+import Benefits from '@/components/Benefits.vue'
+// import Testimonials from '@/components/Testimonials.vue'
 import FAQ from '@/components/FAQ.vue'
-import StayConnected from '@/components/StayConnected.vue'
+// import StayConnected from '@/components/StayConnected.vue'
 import Footer from '@/components/Footer.vue'
 
 export default {
   name: 'App',
   created () {
-    document.title = 'Covid-19 Support package'
+    document.title = '...'
   },
   components: {
-    Header,
+    AppHeader,
+    Top,
     Aside,
     UserContact,
-    BandWidth,
+    Benefits,
+    // Testimonials,
     FAQ,
-    StayConnected,
+    // StayConnected,
     Footer
   },
   data: function () {
     return {
+      page: 0,
       cards: null,
       viewport: {
         width: window.innerWidth,
@@ -265,6 +261,11 @@ export default {
   computed: {
     headerHeight () {
       return this.viewport.width >= 1440 ? 810 : 770
+    }
+  },
+  watch: {
+    page (val) {
+      console.log(val)
     }
   },
   methods: {

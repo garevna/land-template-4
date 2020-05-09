@@ -26,6 +26,6 @@ module.exports = {
   },
   runtimeCompiler: true,
   publicPath: process.env.NODE_ENV === 'production'
-    ? '/dgtek-covid/'
+    ? '/dgtek-land-1/'
     : '/'
 }

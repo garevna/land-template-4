@@ -17,10 +17,10 @@ export default new Vuetify({
   theme: {
     themes: {
       light: {
-        primary: '#FF0E00',
-        secondary: '#E82F37',
-        buttons: '#F54436',
-        homefone: '#FEFEFE',
+        primary: '#83332C',
+        secondary: '#E15240',
+        buttons: '#E15240',
+        homefone: '#FBFBFB',
         inputs: '#EFEFEF',
         activefield: '#D9D9D9',
         warning: '#FAFF00'
