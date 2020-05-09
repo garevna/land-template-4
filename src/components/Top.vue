@@ -12,7 +12,7 @@
               {{ top.text }}
             </p>
           </v-card-text>
-          <v-card-text class="text-center text-md-left">
+          <!-- <v-card-text class="text-center text-md-left">
             <v-btn
                 color="buttons"
                 dark
@@ -23,7 +23,7 @@
             >
                 {{ top.button }}
             </v-btn>
-          </v-card-text>
+          </v-card-text> -->
         </v-card>
       </v-col>
       <v-col sm="12" md="6">
