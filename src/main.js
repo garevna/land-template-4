@@ -9,7 +9,7 @@ Vue.use(vuetify)
 import store from './store'
 
 import '@/scss/fonts.scss'
-import '@/scss/variables.scss'
+// import '@/scss/variables.scss'
 import './registerServiceWorker'
 
 Vue.config.productionTip = false

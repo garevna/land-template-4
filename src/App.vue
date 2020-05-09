@@ -10,13 +10,16 @@
           tile
           class="mx-auto"
         >
-          <v-row class="mx-0 px-0">
+          <v-row class="mx-0 px-0" align="center">
             <v-col cols="12" md="6" class="aside-col">
-              <v-card
+              <!-- <v-card
                       flat
                       class="aside-card transparent"
               >
                 <Aside />
+              </v-card> -->
+              <v-card flat width="100%" max-width="500" class="transparent">
+                <v-img :src="require('@/assets/pictures/man_with_building.svg')" max-width="500" contain class="mx-auto"></v-img>
               </v-card>
             </v-col>
             <v-col cols="12" md="6" class="mx-0 px-0">
@@ -87,7 +90,7 @@ h1, h2, h3, h4, h5, p {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 54px;
   font-weight: 900;
 }
 h2 {
@@ -96,7 +99,7 @@ h2 {
 }
 h3 {
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 600;
 }
 h4 {
   font-size: 24px;
@@ -224,7 +227,7 @@ p {
 
 import AppHeader from '@/components/AppHeader.vue'
 import Top from '@/components/Top.vue'
-import Aside from '@/components/Aside.vue'
+// import Aside from '@/components/Aside.vue'
 import UserContact from '@/components/UserContact.vue'
 import Benefits from '@/components/Benefits.vue'
 // import Testimonials from '@/components/Testimonials.vue'
@@ -240,7 +243,7 @@ export default {
   components: {
     AppHeader,
     Top,
-    Aside,
+    // Aside,
     UserContact,
     Benefits,
     // Testimonials,

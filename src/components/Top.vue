@@ -12,23 +12,23 @@
               {{ top.text }}
             </p>
           </v-card-text>
-          <!-- <v-card-text class="text-center text-md-left">
+          <v-card-text class="text-center text-md-left">
             <v-btn
                 color="buttons"
                 dark
-                rounded
                 height="48"
+                min-width="180"
                 class="submit-button px-auto mx-auto"
                 @click="$emit('update:page', 'contact')"
             >
                 {{ top.button }}
             </v-btn>
-          </v-card-text> -->
+          </v-card-text>
         </v-card>
       </v-col>
       <v-col sm="12" md="6">
           <v-card flat width="100%" max-width="600" class="transparent">
-            <v-img :src="familyPicture" max-width="750" class="mx-auto"></v-img>
+            <v-img :src="require('@/assets/pictures/lady_on_sofa.svg')" max-width="750" class="mx-auto"></v-img>
           </v-card>
       </v-col>
     </v-row>

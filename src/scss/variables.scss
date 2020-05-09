@@ -3,22 +3,48 @@ $heading-font-family: $body-font-family !default;
 $headings: (
   'h1': (
     'size': 46px,
-    'line-height': 150%
+    'line-height': 150%,
+    'font-style': normal,
+    'font-weight': 900,
+    'letter-spacing': 0.02rem
   ),
   'h2': (
     'size': 32px,
-    'line-height': 150%
+    'line-height': 150%,
+    'font-style': normal,
+    'font-weight': 600,
+    'letter-spacing': 0.02rem,
+    'color': #000
   ),
   'h3': (
     'size': 28px,
-    'line-height': 150%
+    'line-height': 150%,
+    'font-style': normal,
+    'font-weight': 600,
+    'letter-spacing': 0.02rem,
+    'color': #222
   ),
   'h4': (
     'size': 24px,
-    'line-height': 100%
+    'line-height': 100%,
+    'font-style': normal,
+    'font-weight': bold,
+    'letter-spacing': 0.02rem,
+    'color': #222
   ),
   'h5': (
     'size': 18px,
-    'line-height': 100%
+    'line-height': 100%,
+    'font-style': normal,
+    'font-weight': bold,
+    'letter-spacing': 0.02rem,
+    'color': #333
+  ),
+  'p': (
+    'size': 16px,
+    'line-height': 100%,
+    'font-style': normal,
+    'letter-spacing': 0.02rem,
+    'color': #444
   )
 );

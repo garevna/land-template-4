@@ -7,7 +7,8 @@ const state = {
   top: {
     header: '[Top Header]',
     text: '[Some text... Some text... Some text... Some text... Some text... Some text... Some text... Some text... Some text... Some text... Some text... Some text... Some text...]',
-    button: '[Header Button]'
+    button: '[Header Button]',
+    image: '@/assets/pictures/lady-on-sofa.svg'
   },
   aside: {
     header: '[Offer Header]',
@@ -35,6 +36,7 @@ const state = {
   benefits: {
     header: '[Benefits Title]',
     text: '[Benefits text... Benefits text... Benefits text... Benefits text... Benefits text... Benefits text... Benefits text... Benefits text... Benefits text... Benefits text...]',
+    button: 'Benefits button',
     items: [
       {
         title: '[Title]',
