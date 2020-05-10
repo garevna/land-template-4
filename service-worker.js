@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dgtek-land-4/precache-manifest.9a93467c0361aed78e35b067c82dad52.js"
+  "/dgtek-land-4/precache-manifest.cd543cf04b92525165c2f18e6e4169eb.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "dgtek-covid"});
