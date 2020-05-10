@@ -4,8 +4,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dgtek-land-4/browserconfig.xml"
   },
   {
-    "revision": "8ff02ff6a49de97437c8",
-    "url": "/dgtek-land-4/css/app.e548853f.css"
+    "revision": "7e460f2a9b7fcb712e6f",
+    "url": "/dgtek-land-4/css/app.d77f74f0.css"
   },
   {
     "revision": "e47f415923a14ae8bca1",
@@ -100,12 +100,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/dgtek-land-4/img/speed.c9a0c7cf.svg"
   },
   {
-    "revision": "81cc68cb1d6e09449c48b1a81fa871bf",
+    "revision": "53e9411c5a5ab4b487d3acb319bbe452",
     "url": "/dgtek-land-4/index.html"
   },
   {
-    "revision": "8ff02ff6a49de97437c8",
-    "url": "/dgtek-land-4/js/app.d53dbbb4.js"
+    "revision": "7e460f2a9b7fcb712e6f",
+    "url": "/dgtek-land-4/js/app.81d5040c.js"
   },
   {
     "revision": "e47f415923a14ae8bca1",
