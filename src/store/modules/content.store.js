@@ -10,23 +10,58 @@ const state = {
     button: '[Header Button]',
     image: '@/assets/pictures/lady-on-sofa.svg'
   },
+  compare: {
+    left: {
+      title: 'DGtek',
+      text: '[Some text about DGtek... Some text about DGtek... Some text about DGtek... Some text about DGtek...]',
+      itemIcon: '',
+      items: [
+        {
+          title: '[Point 1]',
+          text: '[Some text 1... Some text 1... Some text 1...]'
+        },
+        {
+          title: '[Point 2]',
+          text: '[Some text 2... Some text 2... Some text 2...]'
+        },
+        {
+          title: '[Point 3]',
+          text: '[Some text 3... Some text 3... Some text 3...]'
+        }
+      ]
+    },
+    right: {
+      title: 'NBN',
+      text: '[Some text about NBN... Some text about NBN... Some text about NBN... Some text about NBN...]',
+      itemIcon: '',
+      items: [
+        {
+          title: '[Point 1]',
+          text: '[Some text 1... Some text 1... Some text 1...]'
+        },
+        {
+          title: '[Point 2]',
+          text: '[Some text 2... Some text 2... Some text 2...]'
+        },
+        {
+          title: '[Point 3]',
+          text: '[Some text 3... Some text 3... Some text 3...]'
+        }
+      ]
+    }
+  },
+  banner: {
+    header: {
+      black: 'Gigabit Internet',
+      red: 'that\'s truly fast'
+    },
+    text: 'Choose fibre and enjoy Internet at the speed of light!'
+  },
   aside: {
-    header: '[Offer Header]',
-    text: '[Offer text... Offer text... Offer text... Offer text... Offer text... Offer text... Offer text... Offer text... Offer text... Offer text... Offer text... Offer text...]',
-    offer: [
-      {
-        blackText: '[ Relevant ]',
-        redText: '[ Information ]'
-      },
-      {
-        blackText: '[Relevant]',
-        redText: '[Information]'
-      }
-    ],
-    smallText: [
-      '* text 1',
-      '** text 2'
-    ]
+    header: '[Title]',
+    text: '[Some text here... Some text here... Some text here... Some text here... Some text here... Some text here... Some text here... Some text here...]',
+    picture: '@/assets/pictures/lady_on_sofa.svg',
+    button: '[Button text]'
   },
   userForm: {
     title: '[Form title]',
@@ -84,6 +119,10 @@ const state = {
         answer: '[Answer 5]'
       }
     ]
+  },
+  blog: {
+    header: 'Title around articles',
+    articles: [1, 4, 3, 7]
   },
   footer: {
     topHead: 'READY TO GET STARTED?',

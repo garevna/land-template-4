@@ -14,7 +14,7 @@
               tile
         >
           <v-expansion-panel
-              v-for="(item, index) in faq"
+              v-for="(item, index) in faq.items"
               :key="index"
           >
             <v-expansion-panel-header height="64">
