@@ -7,7 +7,7 @@
           v-model="panel"
           class="app-bar d-lg-none"
           width="100%"
-          style="position: fixed; margin-top: -8px; z-index: 10;"
+          style="position: fixed; z-index: 10"
   >
     <v-expansion-panel style="background: #FAFAFA">
       <v-expansion-panel-header
@@ -45,32 +45,25 @@
             flat
             class="homefone app-bar d-none d-lg-block"
     >
-        <v-row align="center" justify="center">
-          <span height="45" width="150" class="ml-10">
-            <v-img src="@/assets/logo.png" contain width="150" height="45"></v-img>
-          </span>
-          <v-spacer></v-spacer>
-      <!-- <v-btn-toggle
-            group
-            flat
-            class="mr-10 d-none d-lg-flex"
-            color="transparent"
-            v-model="toggle"
-      > -->
+      <v-row align="center" justify="center">
+        <span height="45" width="150" class="ml-10">
+          <v-img src="@/assets/logo.png" contain width="150" height="45"></v-img>
+        </span>
+        <v-spacer></v-spacer>
         <a
-               v-for="(page, index) in pages"
-               :key="index"
-               :value="index"
-               name="main-nav-menu-anchor"
-               ref="`menu-item-${index}`"
-               :class="getClassName(page)"
-               @click="action($event.target)">
-              {{ page }}
+              v-for="(page, index) in pages"
+              :key="index"
+              :value="index"
+              name="main-nav-menu-anchor"
+              ref="`menu-item-${index}`"
+              :class="getClassName(page)"
+              @click="action($event.target)"
+        >
+          {{ page }}
         </a>
-      <!-- </v-btn-toggle> -->
-    </v-row>
-  </v-app-bar>
-</v-container>
+      </v-row>
+    </v-app-bar>
+  </v-container>
 </template>
 
 <style scoped>

@@ -75,8 +75,8 @@ body {
   background: #FBFBFB!important;
 }
 
-.user-contact {
-  margin-top: -720px;
+.container {
+  padding: 0!important;
 }
 
 h1, h2, h3, h4, h5, p {
