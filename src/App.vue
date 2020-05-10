@@ -131,32 +131,17 @@ p {
   word-break: normal!important;
 }
 
-</style>
-
-<style scoped>
-
-@media screen and (max-width: 900px) {
-  h1, h4 { text-align: center; }
-}
-@media screen and (max-width: 599px) {
-  h1, h4 { text-align: center; }
-}
-
-@media screen and (max-width: 320px) {
-  h1, h4 { width: 100%; text-align: center; }
-}
-
 ::-webkit-scrollbar {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #FF0E00;
+  background: #83332C;
 }
 ::-webkit-scrollbar-thumb {
-  background: #E5E5E5;
+  background: #E15240;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #72BF44;
+  background: #E5E5E5;
 }
 
 </style>
