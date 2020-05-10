@@ -14,10 +14,10 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/dgtek-land-4/precache-manifest.cd543cf04b92525165c2f18e6e4169eb.js"
+  "/dgtek-land-4/precache-manifest.429c4f27d7d116be0201b4f6e62d907b.js"
 );
 
-workbox.core.setCacheNameDetails({prefix: "dgtek-covid"});
+workbox.core.setCacheNameDetails({prefix: "dgtek"});
 
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
