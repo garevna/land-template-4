@@ -1,6 +1,6 @@
-# dgtek-covid
+# dgtek-land-4
 
-[**demo**](https://garevna.github.io/dgtek-covid/)
+[**demo**](https://garevna.github.io/dgtek-land-4/)
 
 ## Project setup
 ```
