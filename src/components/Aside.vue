@@ -19,7 +19,7 @@
             {{ aside.text }}
           </p>
         </v-card-text>
-        <v-card-actions>
+        <!-- <v-card-actions>
           <v-btn
               dark
               width="220"
@@ -30,7 +30,7 @@
           >
             {{ aside.button }}
           </v-btn>
-        </v-card-actions>
+        </v-card-actions> -->
       </v-card>
     </v-col>
   </v-row>

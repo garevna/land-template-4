@@ -2,38 +2,60 @@
   <v-app light>
     <AppHeader :page="page"/>
     <v-container fluid class="pa-0 my-0 mx-auto" style="max-width: 1000px">
-      <Top />
-      <Compare />
-      <Banner />
-      <!-- <v-row justify="center" class="pa-0 ma-0">
-        <v-sheet
-          width="100%"
-          color="homefone"
-          tile
-          class="mx-auto"
-        > -->
-          <Aside />
-      <!-- <v-row class="mx-0 px-0"> -->
-        <!-- <Benefits /> -->
-      <!-- </v-row> -->
-      <!-- <v-row class="mx-0 px-0">
-        <Testimonials />
-      </v-row> -->
-      <!-- <v-row class="mx-0 px-0"> -->
-        <FAQ/>
-      <!-- </v-row> -->
-      <!-- <v-row class="mx-0 px-0">
-        <StayConnected/>
-      </v-row> -->
-      <!-- <v-row> -->
-      <Articles />
-        <section id="footer" class="mx-auto">
+
+      <section id="home" class="mx-auto">
+        <div class="base-title">
+          <a href="#home" class="core-goto"></a>
+          <Top />
+        </div>
+      </section>
+
+      <!-- <Compare />
+      <Banner /> -->
+
+      <section id="benefits" class="mx-auto">
+        <div class="base-title">
+          <a href="#benefits" class="core-goto"></a>
+          <Benefits />
+        </div>
+      </section>
+
+      <Aside />
+
+      <section id="testimonials" class="mx-auto">
+        <div class="base-title">
+          <a href="#testimonials" class="core-goto"></a>
+          <Testimonials />
+        </div>
+      </section>
+
+      <section id="faq" class="mx-auto">
+        <div class="base-title">
+          <a href="#faq" class="core-goto"></a>
+          <FAQ />
+        </div>
+      </section>
+
+      <section id="stay-connected" class="mx-auto">
+        <div class="base-title">
+          <a href="#stay-connected" class="core-goto"></a>
+          <StayConnected />
+        </div>
+      </section>
+
+      <section id="articles" class="mx-auto">
+        <div class="base-title">
+          <a href="#articles" class="core-goto"></a>
+          <Articles />
+        </div>
+      </section>
+
+      <section id="footer" class="mx-auto">
         <div class="base-title">
           <a href="#footer" class="core-goto"></a>
           <Footer />
         </div>
       </section>
-      <!-- </v-row> -->
     </v-container>
   </v-app>
 </template>
@@ -136,18 +158,7 @@ p {
 ::-webkit-scrollbar-thumb:hover {
   background: #72BF44;
 }
-/*
-@media screen and (max-width: 600px) {
-  .user-contact {
-    margin-top: -900px;
-  }
-} */
-/*
-@media screen and (max-width: 320px) {
-  .user-contact {
-    margin-top: -900px;
-  }
-} */
+
 </style>
 
 <script>
@@ -155,10 +166,10 @@ p {
 import AppHeader from '@/components/AppHeader.vue'
 import Top from '@/components/Top.vue'
 import Aside from '@/components/Aside.vue'
-import Compare from '@/components/Compare.vue'
-import Banner from '@/components/Banner.vue'
+// import Compare from '@/components/Compare.vue'
+// import Banner from '@/components/Banner.vue'
 // import UserContact from '@/components/UserContact.vue'
-// import Benefits from '@/components/Benefits.vue'
+import Benefits from '@/components/Benefits.vue'
 // import Testimonials from '@/components/Testimonials.vue'
 import FAQ from '@/components/FAQ.vue'
 import Articles from '@/components/Articles.vue'
@@ -174,10 +185,10 @@ export default {
     AppHeader,
     Top,
     Aside,
-    Compare,
-    Banner,
+    // Compare,
+    // Banner,
     // UserContact,
-    // Benefits,
+    Benefits,
     Articles,
     // Testimonials,
     FAQ,
